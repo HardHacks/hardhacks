@@ -11,7 +11,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## User Stories
 
-What?
+### What
 Our app is centered on gathering online information on new videoe game selections.
 
 Things that would be included would be: 
@@ -20,29 +20,29 @@ Things that would be included would be:
 - write reviews for a game
 - find out the best way of buying said game
 
-Who?
+### Who
 With the ever increasing number of games being released, the organization of these events would provide gamers more information before buying a game.
 
-Why?
+### Why
 Currently there are no apps that aggregate all of the information and find the best video game deal for you. 
 
 
 ###Minimum Features
 
 The following **features** will be implemented:
-- [ ]
-- [ ]
-- [ ] 
-- [ ] 
-- [ ] 
+- [X]
+- [X]
+- [X] 
+- [X] 
+- [X] 
 
 
 ###Mightfinish Features
 The following **optional** might be implemented:
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [X] 
+- [X] 
+- [X] 
+- [X] 
 
 
 
