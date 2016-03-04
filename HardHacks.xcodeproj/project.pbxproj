@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0FE67D54785C3BCF2508977 /* Pods_HardHacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D48E92986C59E5EDC8C23B0 /* Pods_HardHacks.framework */; };
 		C886378A1C8928C200751FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88637891C8928C200751FB7 /* AppDelegate.swift */; };
 		C886378C1C8928C200751FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C886378B1C8928C200751FB7 /* ViewController.swift */; };
 		C886378F1C8928C200751FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C886378D1C8928C200751FB7 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E1458AC97101282BE82B80C /* Pods-HardHacks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardHacks.release.xcconfig"; path = "Pods/Target Support Files/Pods-HardHacks/Pods-HardHacks.release.xcconfig"; sourceTree = "<group>"; };
+		6D48E92986C59E5EDC8C23B0 /* Pods_HardHacks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardHacks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A760A184D97A374D25AE411 /* Pods-HardHacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardHacks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardHacks/Pods-HardHacks.debug.xcconfig"; sourceTree = "<group>"; };
 		C88637861C8928C200751FB7 /* HardHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HardHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88637891C8928C200751FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C886378B1C8928C200751FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FE67D54785C3BCF2508977 /* Pods_HardHacks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A67F3618087C05F400D4EDBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D48E92986C59E5EDC8C23B0 /* Pods_HardHacks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF136F993334275EC046B92A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A760A184D97A374D25AE411 /* Pods-HardHacks.debug.xcconfig */,
+				2E1458AC97101282BE82B80C /* Pods-HardHacks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C886377D1C8928C200751FB7 = {
 			isa = PBXGroup;
 			children = (
 				C88637881C8928C200751FB7 /* HardHacks */,
 				C88637871C8928C200751FB7 /* Products */,
+				AF136F993334275EC046B92A /* Pods */,
+				A67F3618087C05F400D4EDBB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C88637981C8928C200751FB7 /* Build configuration list for PBXNativeTarget "HardHacks" */;
 			buildPhases = (
+				6D31216AF187E78AF39E2614 /* Check Pods Manifest.lock */,
 				C88637821C8928C200751FB7 /* Sources */,
 				C88637831C8928C200751FB7 /* Frameworks */,
 				C88637841C8928C200751FB7 /* Resources */,
+				363D84968134915A21F614FE /* Embed Pods Frameworks */,
+				9C20BD9F213641F4023BFF48 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		363D84968134915A21F614FE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HardHacks/Pods-HardHacks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D31216AF187E78AF39E2614 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9C20BD9F213641F4023BFF48 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HardHacks/Pods-HardHacks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C88637821C8928C200751FB7 /* Sources */ = {
@@ -248,6 +323,7 @@
 		};
 		C88637991C8928C200751FB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A760A184D97A374D25AE411 /* Pods-HardHacks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HardHacks/Info.plist;
@@ -259,6 +335,7 @@
 		};
 		C886379A1C8928C200751FB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E1458AC97101282BE82B80C /* Pods-HardHacks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HardHacks/Info.plist;
@@ -287,6 +364,7 @@
 				C886379A1C8928C200751FB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
