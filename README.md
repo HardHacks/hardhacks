@@ -2,6 +2,9 @@
 
 This project allows users to find listing of the newest game releases. 
 
+##Wireframes
+
+https://mhammond.proto.io/share/?id=c918957a-b946-4be6-a7f8-12c989b1ccad&v=1
 
 ## Video Walkthrough 
 Here's a walkthrough of implemented user stories:
