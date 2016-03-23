@@ -19,10 +19,10 @@ Our app is centered on providing a detailed view of a user's lifestyle, through 
 
 Things that would be included would be: 
 - A chart of the tracked activities
--   -Sitting
--   -Walking
--   -Running
--   -Driving
+  -Sitting
+  -Walking
+  -Running
+  -Driving
 - A pie chart, showing the percentage of the day spent doing each activity
 - A list of said activities, with times in hr:min, of time spent performing that activity today
 - A method for storing user data, via a login to a service such as parse, allowing long term goal/stats tracking
